@@ -1,13 +1,13 @@
 {% set name = "django-wildewidgets" %}
-{% set version = "0.16.15" %}
+{% set version = "0.16.16" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-wildewidgets-{{ version }}.tar.gz
-  sha256: 7413301a7dc53309f5879518cd5934286bb903022643528250706573c6725425
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django-wildewidgets-{{ version }}.tar.gz
+  sha256: 51451947d690c1fbf991a19fcbe55871f6de2d9605b7bd90ee96a9a0492b01b5
 
 build:
   noarch: python
@@ -16,10 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - django-crispy-forms
     - crispy-bootstrap5
 
@@ -30,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/caltechads/django-wildewidgets
