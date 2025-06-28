@@ -1,5 +1,6 @@
 {% set name = "django-wildewidgets" %}
 {% set version = "1.1.6" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -20,8 +21,8 @@ requirements:
     - pip
     - setuptools
   run:
-    - django >=5.1
     - python >={{ python_min }}
+    - django >=5.1
     - django-crispy-forms >=2.4
     - crispy-bootstrap5 >=2025.6
 
