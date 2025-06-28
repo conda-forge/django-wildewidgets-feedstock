@@ -1,5 +1,6 @@
 {% set name = "django-wildewidgets" %}
-{% set version = "1.1.4" %}
+{% set version = "1.1.6" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 616ef8607a968a85ab785fc0459383a16408c0058c478f8c2d98ec1d3a5860aa
+  sha256: 39c51c359ef9d185f8fccab7bbce72fae117a6eb8b1ed05f56aab35f8379cf9f
 
 build:
   noarch: python
@@ -21,8 +22,9 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - django-crispy-forms
-    - crispy-bootstrap5
+    - django >=5.1
+    - django-crispy-forms >=2.4
+    - crispy-bootstrap5 >=2025.6
 
 test:
   imports:
