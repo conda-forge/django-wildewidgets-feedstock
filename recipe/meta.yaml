@@ -1,5 +1,5 @@
 {% set name = "django-wildewidgets" %}
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 43107017a4d262a9e3ad7cde8e4a0ed4a09279367ff3468be220238fbe692ef3
+  sha256: 3b3ea76bc18ba81d0010716d8230d85aba9eb8275edc98cac2ee7e94088fa77e
 
 build:
   noarch: python
