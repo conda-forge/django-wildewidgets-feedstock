@@ -1,6 +1,6 @@
 {% set name = "django-wildewidgets" %}
 {% set version = "1.7.2" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.14" %}
 
 package:
   name: {{ name|lower }}
